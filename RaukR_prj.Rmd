@@ -96,16 +96,16 @@ df_sorted <-
   mutate(site = 
 forcats::fct_reorder(site, -temp_mean_summer))
 
-p <- ggplot(df_sorted, aes(site, fill = site)) +
-  geom_boxplot(aes(y = temp_mean_summer)) +
-  geom_boxplot(aes(y = temp_mean_winter)) +
+p <- ggplot(df_sorted, aes(site)) +
+  geom_boxplot(aes(y = temp_mean_summer), fill = "orange") +
+  geom_boxplot(aes(y = temp_mean_winter), fill = "blue") +
   geom_point(aes(y = temp_mean_summer), size = 2, alpha = 0.15) +
   geom_point(aes(y = temp_mean_winter), size = 2, alpha = 0.15) +
   scale_fill_hue(direction = 1) +
   theme_classic()
 
 p <- p + labs(x = NULL, y = "Temperature") +
-  theme(legend.position = "none",
+  theme(legend.position = "bottom",
         axis.title = element_text(size = 16),
          axis.text.x = element_text(family = "Roboto Mono", size = 13),
         axis.text.y = element_text(size = 13))
@@ -124,15 +124,19 @@ df_sorted2 <-
   mutate(site =
            forcats::fct_reorder(site,-precip_tot_summer))
 
-a <- ggplot(df_sorted2, aes(site, fill = site)) +
-  geom_boxplot(aes(y= precip_tot_summer)) +
-  geom_boxplot(aes(y= precip_tot_winter)) +
+a <- ggplot(df_sorted2, aes(site)) +
+  geom_boxplot(aes(y= precip_tot_summer), fill = "orange") +
+  geom_boxplot(aes(y= precip_tot_winter), fill = "blue") +
   geom_point(aes(y= precip_tot_summer),size = 2, alpha = 0.15)+
   geom_point(aes(y= precip_tot_winter),size = 2, alpha = 0.15)+
   scale_fill_hue(direction = 1) +
   theme_classic()
-a <- p+ labs(x = NULL, y = "Precipitation") +
-        theme(legend.position = "none")
+
+a <- a+ labs(x = NULL, y = "Precipitation") +
+  theme(legend.position = "bottom",
+        axis.title = element_text(size = 16),
+         axis.text.x = element_text(family = "Roboto Mono", size = 13),
+        axis.text.y = element_text(size = 13))
 a
 ```
 
