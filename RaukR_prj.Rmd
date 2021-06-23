@@ -1,0 +1,176 @@
+---
+title: "Climate change effect on an alpine plant"
+subtitle: "Silene acaulis"
+author: "Maria Elisa Pierfederici"
+institute: "NMBU, Norway"
+date: "(updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    css: [default, metropolis, metropolis-fonts]
+    lib_dir: libs
+    nature:
+      highlightStyle: arta
+      highlightLines: true
+      countIncrementalSlides: false
+      background-size: contain
+---
+
+```{r setup, include=FALSE}
+options(
+  htmltools.dir.version  = FALSE,
+  htmltools.preserve.raw = FALSE # needed for windows
+)
+
+```
+
+```{r include = FALSE}
+library(leaflet)
+library(readxl)
+library(png)
+library(grid)
+library(ggplot2)
+library(readxl)
+library(ggplot2)
+library(dplyr)
+library(showtext)
+library(showtextdb)
+library(backports)
+font_add_google("Poppins", "Poppins")
+font_add_google("Roboto Mono", "Roboto Mono")
+showtext_auto()
+```
+
+# *Silene acaulis* L.
+
+.center[![description of the image](img/sileneacaulis.png)]
+
+---
+
+# Vital rates 
+#### Effect of climate change on the demography of Silene acaulis in Europe
+
+
+.center[
+- #### **Survival**
+- #### **Growth**
+- #### **Reproduction**
+ 
+```{r warning=FALSE, echo=FALSE}
+df_model <- read_excel("data/df_model.xlsx")     
+
+DT::datatable(tail(df_model), fillContainer = FALSE, options = list(pageLength = 4))
+```
+]
+---
+
+# Study sites `r emo::ji("earth")`
+
+#### Four populations located in **Sweden**
+
+- #### Jamtland region `r emo::ji("east")`  **SJ1**  **SJ2** 
+- #### Norbotten region `r emo::ji("east")`  **SA1** **SA2** 
+
+.center[ 
+```{r warning=FALSE, out.width="100%", message=FALSE, echo=FALSE,fig.height=4, fig.width=10}
+
+df_location <- read_excel("data/lat_long_EU_sites_Silene.xlsx",
+                             col_types = c("text", "numeric", "numeric"))
+df_location %>%
+  leaflet( width = 900) %>%
+  addTiles() %>%
+  addMarkers(clusterOptions = markerClusterOptions(), popup = "SA1")
+```
+]
+
+---
+# Climate `r emo::ji("graph")`
+
+.pull-left[
+**Temperature** 
+
+```{r echo=FALSE}
+
+df_climate <- read_excel("data/df_climvar_sweden.xlsx")
+
+df_sorted <-
+  df_climate %>%
+  mutate(site = 
+forcats::fct_reorder(site, -temp_mean_summer))
+
+p <- ggplot(df_sorted, aes(site, fill = site)) +
+  geom_boxplot(aes(y = temp_mean_summer)) +
+  geom_boxplot(aes(y = temp_mean_winter)) +
+  geom_point(aes(y = temp_mean_summer), size = 2, alpha = 0.15) +
+  geom_point(aes(y = temp_mean_winter), size = 2, alpha = 0.15) +
+  scale_fill_hue(direction = 1) +
+  theme_classic()
+
+p <- p + labs(x = NULL, y = "Temperature") +
+  theme(legend.position = "none",
+        axis.title = element_text(size = 16),
+         axis.text.x = element_text(family = "Roboto Mono", size = 13),
+        axis.text.y = element_text(size = 13))
+p
+```
+
+]
+
+.pull-right[
+**Precipitation** 
+
+```{r, echo=F, out.width="100%"}
+
+df_sorted2 <-
+  df_climate %>%
+  mutate(site =
+           forcats::fct_reorder(site,-precip_tot_summer))
+
+a <- ggplot(df_sorted2, aes(site, fill = site)) +
+  geom_boxplot(aes(y= precip_tot_summer)) +
+  geom_boxplot(aes(y= precip_tot_winter)) +
+  geom_point(aes(y= precip_tot_summer),size = 2, alpha = 0.15)+
+  geom_point(aes(y= precip_tot_winter),size = 2, alpha = 0.15)+
+  scale_fill_hue(direction = 1) +
+  theme_classic()
+a <- p+ labs(x = NULL, y = "Precipitation") +
+        theme(legend.position = "none")
+a
+```
+
+]
+
+---
+# Reproduction data  `r emo::ji("book")` 
+_Silene acaulis_ **fecundity data**
+
+
+```{r echo=FALSE}
+#library(DT)
+library(readxl)
+
+df_info <- read_excel("data/info_full_df.xlsx")
+DT::datatable(head(df_info), fillContainer = FALSE, options = list(pageLength = 4))
+#knitr::kable(head(df_info), format = 'html')
+#tibble::as_tibble(df_info)
+#df_info %>% DT::datatable()
+```
+
+---
+# Package `r emo::ji("package")` _alpineplant_
+
+[Package link](https://github.com/mariapie/alpineplant.git)
+
+```{r message=FALSE}
+remotes::install_github("https://github.com/mariapie/alpineplant.git")
+```
+--
+```{r}
+library(alpineplant)
+```
+--
+
+
+```{r echo=T, results='hide'}
+info_transform_seedling(df_info)
+```
+

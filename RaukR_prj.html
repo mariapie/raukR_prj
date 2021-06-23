@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Climate change effect on an alpine plant</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Maria Elisa Pierfederici" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/jquery/jquery.min.js"></script>
+    <link href="libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="libs/datatables-binding/datatables.js"></script>
+    <link href="libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="libs/dt-core/js/jquery.dataTables.min.js"></script>
+    <link href="libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+    <script src="libs/crosstalk/js/crosstalk.min.js"></script>
+    <link href="libs/leaflet/leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet/leaflet.js"></script>
+    <link href="libs/leafletfix/leafletfix.css" rel="stylesheet" />
+    <script src="libs/proj4/proj4.min.js"></script>
+    <script src="libs/Proj4Leaflet/proj4leaflet.js"></script>
+    <link href="libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
+    <script src="libs/leaflet-binding/leaflet.js"></script>
+    <link href="libs/leaflet-markercluster/MarkerCluster.css" rel="stylesheet" />
+    <link href="libs/leaflet-markercluster/MarkerCluster.Default.css" rel="stylesheet" />
+    <script src="libs/leaflet-markercluster/leaflet.markercluster.js"></script>
+    <script src="libs/leaflet-markercluster/leaflet.markercluster.freezable.js"></script>
+    <script src="libs/leaflet-markercluster/leaflet.markercluster.layersupport.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Climate change effect on an alpine plant
+## Silene acaulis
+### Maria Elisa Pierfederici
+### NMBU, Norway
+### (updated: 2021-06-23)
+
+---
+
+
+
+
+
+
+# *Silene acaulis* L.
+
+.center[![description of the image](img/sileneacaulis.png)]
+
+---
+
+# Vital rates 
+#### Effect of climate change on the demography of Silene acaulis in Europe
+
+
+.center[
+- #### **Survival**
+- #### **Growth**
+- #### **Reproduction**
+ 
+<div id="htmlwidget-f1b1608ef36f4b553287" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f1b1608ef36f4b553287">{"x":{"filter":"none","fillContainer":false,"data":[["1","2","3","4","5","6"],["SV1","SV1","SV1","SV1","SV1","SV1"],["94","95","96","97","98","99"],["2012","2012","2012","2012","2012","2012"],[14,null,null,null,15,null],[null,0,0,0,null,0],[3.36220227104188,25.5175863287831,66.9630474112664,10.8573442108063,3.6023595761163,57.1769862953342],[1,1,1,1,1,1],[null,null,null,null,null,null],["2011","2011","2011","2011","2011","2011"],[13,null,null,null,6,null],[null,1,0,0,null,0],[3.12204496596746,15.0843571262114,62.3449062104894,8.66254904319216,1.44094383044652,45.7965669077052],[null,null,null,null,null,null],[null,null,null,null,null,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>site<\/th>\n      <th>plt<\/th>\n      <th>year_t<\/th>\n      <th>ros_t<\/th>\n      <th>frt_t<\/th>\n      <th>area_t<\/th>\n      <th>alive_t<\/th>\n      <th>nsdl_t<\/th>\n      <th>year_lag1<\/th>\n      <th>ros_lag1<\/th>\n      <th>frt_lag1<\/th>\n      <th>area_lag1<\/th>\n      <th>alive_lag1<\/th>\n      <th>nsdl_lag1<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[4,5,6,7,10,11,12,13,14]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+]
+---
+
+# Study sites 🌎
+
+#### Four populations located in **Sweden**
+
+- #### Jamtland region ➡️  **SJ1**  **SJ2** 
+- #### Norbotten region ➡️  **SA1** **SA2** 
+
+.center[ 
+<div id="htmlwidget-351237ef642ab3466558" style="width:900px;height:288px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-351237ef642ab3466558">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[68.36557,68.40511,63.20552,63.2044],[18.67874,18.35701,12.33841,12.32998],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"SA1",null,{"showCoverageOnHover":true,"zoomToBoundsOnClick":true,"spiderfyOnMaxZoom":true,"removeOutsideVisibleBounds":true,"spiderLegPolylineOptions":{"weight":1.5,"color":"#222","opacity":0.5},"freezeAtZoom":false},null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[63.2044,68.40511],"lng":[12.32998,18.67874]}},"evals":[],"jsHooks":[]}</script>
+]
+
+---
+# Climate 📉
+
+.pull-left[
+**Temperature** 
+
+![](RaukR_prj_files/figure-html/unnamed-chunk-4-1.png)&lt;!-- --&gt;
+
+]
+
+.pull-right[
+**Precipitation** 
+
+&lt;img src="RaukR_prj_files/figure-html/unnamed-chunk-5-1.png" width="100%" /&gt;
+
+]
+
+---
+# Reproduction data  📖 
+_Silene acaulis_ **fecundity data**
+
+
+<div id="htmlwidget-23444d4cbff8bc810e70" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-23444d4cbff8bc810e70">{"x":{"filter":"none","fillContainer":false,"data":[["1","2","3","4","5","6"],[2013,2014,2015,2016,2017,2013],["9","13","38","52","0","0"],["1","1","58","10","0","0"],["1","2","3","2","0","0"],["106","113","128","191","164","10"],["4","15","140","21","7","1"],["97","100","90","139","0","10"],["3","14","82","11","0","1"],["SJ1","SJ1","SJ1","SJ1","SJ1","SJ2"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>year<\/th>\n      <th>ND1r<\/th>\n      <th>NDsd<\/th>\n      <th>NG1r<\/th>\n      <th>SS1r<\/th>\n      <th>SSsd<\/th>\n      <th>NS1r<\/th>\n      <th>NSsd<\/th>\n      <th>site<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":1},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+
+---
+# Package 📦 _alpineplant_
+
+[Package link](https://github.com/mariapie/alpineplant.git)
+
+
+```r
+remotes::install_github("https://github.com/mariapie/alpineplant.git")
+```
+--
+
+```r
+library(alpineplant)
+```
+--
+
+
+
+```r
+info_transform_seedling(df_info)
+```
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "arta",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"background-size": "contain"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
