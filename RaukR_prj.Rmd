@@ -48,17 +48,16 @@ showtext_auto()
 
 # Vital rates 
 #### Effect of climate change on the demography of Silene acaulis in Europe
-
-
-.center[
 - #### **Survival**
 - #### **Growth**
 - #### **Reproduction**
- 
+
+.center[
 ```{r warning=FALSE, echo=FALSE}
 df_model <- read_excel("data/df_model.xlsx")     
 
-DT::datatable(tail(df_model), fillContainer = FALSE, options = list(pageLength = 4))
+tibble::as_tibble(df_model)
+#DT::datatable(tail(df_model), fillContainer = FALSE, options = list(pageLength = 4))
 ```
 ]
 ---
@@ -140,37 +139,40 @@ a
 ]
 
 ---
-# Reproduction data  `r emo::ji("book")` 
-_Silene acaulis_ **fecundity data**
-
-
-```{r echo=FALSE}
-#library(DT)
-library(readxl)
-
-df_info <- read_excel("data/info_full_df.xlsx")
-DT::datatable(head(df_info), fillContainer = FALSE, options = list(pageLength = 4))
-#knitr::kable(head(df_info), format = 'html')
-#tibble::as_tibble(df_info)
-#df_info %>% DT::datatable()
-```
-
----
-# Package `r emo::ji("package")` _alpineplant_
-
-[Package link](https://github.com/mariapie/alpineplant.git)
+# `r emo::ji("package")` _alpineplant_
+##Installation 
+You can install the development version from GitHub with
 
 ```{r message=FALSE}
 remotes::install_github("https://github.com/mariapie/alpineplant.git")
 ```
+[Package link](https://github.com/mariapie/alpineplant.git)
 --
-```{r}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(alpineplant)
 ```
---
 
+---
+# `r emo::ji("package")` _alpineplant_
+## _Silene acaulis_ reproduction data  `r emo::ji("book")` 
+
+```{r echo=FALSE}
+library(DT)
+DT::datatable(head(df_info), fillContainer = FALSE, options = list(pageLength = 8))
+#knitr::kable(head(df_info), format = 'html')
+#tibble::as_tibble(df_info)
+#df_info %>% DT::datatable()
+```
+---
 
 ```{r echo=T, results='hide'}
 info_transform_seedling(df_info)
 ```
 
+```{r echo=F, results='hide'}
+info_obj <- info_transform_seedling(df_info)
+```
+
+```{r echo=T}
+info_obj 
+```
