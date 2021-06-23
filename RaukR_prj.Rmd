@@ -1,6 +1,6 @@
 ---
-title: "Climate change effect on an alpine plant"
-subtitle: "Silene acaulis"
+title: "Climate change effect on _Silene acaulis_"
+subtitle: "Seedling survival probability"
 author: "Maria Elisa Pierfederici"
 institute: "NMBU, Norway"
 date: "(updated: `r Sys.Date()`)"
@@ -47,7 +47,7 @@ showtext_auto()
 ---
 
 # Vital rates 
-#### Effect of climate change on the demography of Silene acaulis in Europe
+Effect of climate change on the demography of Silene acaulis in Europe
 - #### **Survival**
 - #### **Growth**
 - #### **Reproduction**
@@ -64,10 +64,10 @@ tibble::as_tibble(df_model)
 
 # Study sites `r emo::ji("earth")`
 
-#### Four populations located in **Sweden**
+Four populations located in **Sweden**
 
-- #### Jamtland region `r emo::ji("east")`  **SJ1**  **SJ2** 
-- #### Norbotten region `r emo::ji("east")`  **SA1** **SA2** 
+- Jamtland region `r emo::ji("east")`  **SJ1**  **SJ2** 
+- Norbotten region `r emo::ji("east")`  **SA1** **SA2** 
 
 .center[ 
 ```{r warning=FALSE, out.width="100%", message=FALSE, echo=FALSE,fig.height=4, fig.width=10}
