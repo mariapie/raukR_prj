@@ -60,14 +60,14 @@ tibble::as_tibble(df_model)
 #DT::datatable(tail(df_model), fillContainer = FALSE, options = list(pageLength = 4))
 ```
 ]
----
 
+---
 # Study sites `r emo::ji("earth")`
 
 Four populations located in **Sweden**
 
-- Jamtland region `r emo::ji("east")`  **SJ1**  **SJ2** 
-- Norbotten region `r emo::ji("east")`  **SA1** **SA2** 
+- Jamtland region = **SJ1**  **SJ2** 
+- Norbotten region =  **SA1** **SA2** 
 
 .center[ 
 ```{r warning=FALSE, out.width="100%", message=FALSE, echo=FALSE,fig.height=4, fig.width=10}
@@ -140,6 +140,9 @@ a
 
 ---
 # `r emo::ji("package")` _alpineplant_
+##Overview
+**Goal:** estimate seedling survival probability of _Silene acaulis_ to be used in the IPM 
+
 ##Installation 
 You can install the development version from GitHub with
 
@@ -155,10 +158,13 @@ library(alpineplant)
 ---
 # `r emo::ji("package")` _alpineplant_
 ## _Silene acaulis_ reproduction data  `r emo::ji("book")` 
+- **SSsd** = seedling sample size 
+- **Ndsd** = number of dead seedling
+- **NSsd** = number of survived seedling
 
 ```{r echo=FALSE}
 library(DT)
-DT::datatable(head(df_info), fillContainer = FALSE, options = list(pageLength = 8))
+DT::datatable(head(df_info), fillContainer = FALSE, options = list(pageLength = 4))
 #knitr::kable(head(df_info), format = 'html')
 #tibble::as_tibble(df_info)
 #df_info %>% DT::datatable()
@@ -173,6 +179,6 @@ info_transform_seedling(df_info)
 info_obj <- info_transform_seedling(df_info)
 ```
 
-```{r echo=T}
-info_obj 
+```{r echo=F}
+DT::datatable(head(info_obj), fillContainer = FALSE, options = list(pageLength = 4))
 ```

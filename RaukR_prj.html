@@ -79,22 +79,22 @@ Effect of climate change on the demography of Silene acaulis in Europe
 ## #   area_lag1 &lt;dbl&gt;, alive_lag1 &lt;dbl&gt;, nsdl_lag1 &lt;dbl&gt;
 ```
 ]
----
 
-# Study sites 🌏
+---
+# Study sites 🌐
 
 Four populations located in **Sweden**
 
-- Jamtland region ➡️  **SJ1**  **SJ2** 
-- Norbotten region ➡️  **SA1** **SA2** 
+- Jamtland region = **SJ1**  **SJ2** 
+- Norbotten region =  **SA1** **SA2** 
 
 .center[ 
-<div id="htmlwidget-85e19218157c087e0bc8" style="width:900px;height:288px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-85e19218157c087e0bc8">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[68.36557,68.40511,63.20552,63.2044],[18.67874,18.35701,12.33841,12.32998],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"SA1",null,{"showCoverageOnHover":true,"zoomToBoundsOnClick":true,"spiderfyOnMaxZoom":true,"removeOutsideVisibleBounds":true,"spiderLegPolylineOptions":{"weight":1.5,"color":"#222","opacity":0.5},"freezeAtZoom":false},null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[63.2044,68.40511],"lng":[12.32998,18.67874]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-c85b5eb26fc5e1c20ecb" style="width:900px;height:288px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c85b5eb26fc5e1c20ecb">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[68.36557,68.40511,63.20552,63.2044],[18.67874,18.35701,12.33841,12.32998],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"SA1",null,{"showCoverageOnHover":true,"zoomToBoundsOnClick":true,"spiderfyOnMaxZoom":true,"removeOutsideVisibleBounds":true,"spiderLegPolylineOptions":{"weight":1.5,"color":"#222","opacity":0.5},"freezeAtZoom":false},null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[63.2044,68.40511],"lng":[12.32998,18.67874]}},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
-# Climate 📊
+# Climate 💹
 
 .pull-left[
 **Temperature** 
@@ -112,6 +112,9 @@ Four populations located in **Sweden**
 
 ---
 # 📦 _alpineplant_
+##Overview
+**Goal:** estimate seedling survival probability of _Silene acaulis_ to be used in the IPM 
+
 ##Installation 
 You can install the development version from GitHub with
 
@@ -126,9 +129,12 @@ remotes::install_github("https://github.com/mariapie/alpineplant.git")
 ---
 # 📦 _alpineplant_
 ## _Silene acaulis_ reproduction data  📖 
+- **SSsd** = seedling sample size 
+- **Ndsd** = number of dead seedling
+- **NSsd** = number of survived seedling
 
-<div id="htmlwidget-5c50a411602e13fd5a21" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-5c50a411602e13fd5a21">{"x":{"filter":"none","fillContainer":false,"data":[["1","2","3","4","5","6"],[2013,2014,2015,2016,2017,2013],["9","13","38","52","0","0"],["1","1","58","10","0","0"],["1","2","3","2","0","0"],["106","113","128","191","164","10"],["4","15","140","21","7","1"],["97","100","90","139","0","10"],["3","14","82","11","0","1"],["SJ1","SJ1","SJ1","SJ1","SJ1","SJ2"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>year<\/th>\n      <th>ND1r<\/th>\n      <th>NDsd<\/th>\n      <th>NG1r<\/th>\n      <th>SS1r<\/th>\n      <th>SSsd<\/th>\n      <th>NS1r<\/th>\n      <th>NSsd<\/th>\n      <th>site<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"columnDefs":[{"className":"dt-right","targets":1},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-b4407187b41de2a146f0" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b4407187b41de2a146f0">{"x":{"filter":"none","fillContainer":false,"data":[["1","2","3","4","5","6"],[2013,2014,2015,2016,2017,2013],["9","13","38","52","0","0"],["1","1","58","10","0","0"],["1","2","3","2","0","0"],["106","113","128","191","164","10"],["4","15","140","21","7","1"],["97","100","90","139","0","10"],["3","14","82","11","0","1"],["SJ1","SJ1","SJ1","SJ1","SJ1","SJ2"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>year<\/th>\n      <th>ND1r<\/th>\n      <th>NDsd<\/th>\n      <th>NG1r<\/th>\n      <th>SS1r<\/th>\n      <th>SSsd<\/th>\n      <th>NS1r<\/th>\n      <th>NSsd<\/th>\n      <th>site<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":1},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 ---
 
 
@@ -138,27 +144,8 @@ info_transform_seedling(df_info)
 
 
 
-
-```r
-info_obj 
-```
-
-```
-## # A tibble: 622 x 5
-##    site  trans     plt   year  alive
-##    &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;
-##  1 SA1   SA1_id_1  id_1  2012  1    
-##  2 SA1   SA1_id_2  id_2  2012  1    
-##  3 SA1   SA1_id_3  id_3  2012  1    
-##  4 SA1   SA1_id_4  id_4  2012  1    
-##  5 SA1   SA1_id_5  id_5  2012  1    
-##  6 SA1   SA1_id_6  id_6  2012  1    
-##  7 SA1   SA1_id_7  id_7  2012  1    
-##  8 SA1   SA1_id_8  id_8  2012  1    
-##  9 SA1   SA1_id_9  id_9  2012  1    
-## 10 SA1   SA1_id_10 id_10 2012  1    
-## # ... with 612 more rows
-```
+<div id="htmlwidget-5d5e21b7f3e0e0a70ed1" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5d5e21b7f3e0e0a70ed1">{"x":{"filter":"none","fillContainer":false,"data":[["1","2","3","4","5","6"],["SA1","SA1","SA1","SA1","SA1","SA1"],["SA1_id_1","SA1_id_2","SA1_id_3","SA1_id_4","SA1_id_5","SA1_id_6"],["id_1","id_2","id_3","id_4","id_5","id_6"],["2012","2012","2012","2012","2012","2012"],["1","1","1","1","1","1"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>site<\/th>\n      <th>trans<\/th>\n      <th>plt<\/th>\n      <th>year<\/th>\n      <th>alive<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
