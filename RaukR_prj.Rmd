@@ -151,10 +151,9 @@ remotes::install_github("https://github.com/mariapie/alpineplant.git")
 ```
 [Package link](https://github.com/mariapie/alpineplant.git)
 --
-```{r echo=FALSE, message=FALSE, warning=FALSE}
+```{r echo=T}
 library(alpineplant)
 ```
-
 ---
 # `r emo::ji("package")` _alpineplant_
 ## _Silene acaulis_ reproduction data  `r emo::ji("book")` 
@@ -170,6 +169,9 @@ DT::datatable(head(df_info), fillContainer = FALSE, options = list(pageLength = 
 #df_info %>% DT::datatable()
 ```
 ---
+# `r emo::ji("package")` _alpineplant_
+##Function
+
 
 ```{r echo=T, results='hide'}
 info_transform_seedling(df_info)
