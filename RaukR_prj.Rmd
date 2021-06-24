@@ -42,15 +42,25 @@ showtext_auto()
 
 # *Silene acaulis* L.
 
-.center[![description of the image](img/sileneacaulis.png)]
+- long-lived perennial **cushion-plant** 
+- widely distributed throughout the **arctic and alpine ecosystems** 
+- insulates heat, moistens soil, and facilitates the absorption of nutrients 
+
+.pull-left[
+![description of the image](img/sileneacaulis.png)
+]
+
+.pull-right[
+![description of the image](img/silenefruit.png)
+]
 
 ---
 
 # Vital rates 
 Effect of climate change on the demography of Silene acaulis in Europe
-- #### **Survival**
-- #### **Growth**
-- #### **Reproduction**
+- **Survival**
+- **Growth**
+- **Reproduction**
 
 .center[
 ```{r warning=FALSE, echo=FALSE}
